@@ -33,10 +33,10 @@ class MainActivity : ComponentActivity() {
     )
     fun determinante(losBuenos: Map<String, Int>, losMaliciosos: Map<String, Int>): String{
         val valorDeLosBuenos=losBuenos.entries.sumOf { (raza, cantidad) ->
-            valoresRazas[raza] ?: 0 * cantidad
+            (valoresRazas[raza] ?: 0) * cantidad
         }
         val valorDeLosMalos=losMaliciosos.entries.sumOf { (raza, cantidad) ->
-            valoresRazas[raza] ?: 0 * cantidad
+            (valoresRazas[raza] ?: 0) * cantidad
         }
         return when{
             valorDeLosBuenos>valorDeLosMalos -> "El bien gana"
