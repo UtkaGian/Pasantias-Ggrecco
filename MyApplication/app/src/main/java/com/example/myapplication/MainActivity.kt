@@ -1,4 +1,4 @@
-package com.example.whereisdarobot
+package com.example.myapplication
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,36 +11,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.whereisdarobot.ui.theme.WhereIsDaRobotTheme
+import com.example.myapplication.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val pasos= intArrayOf(10, 5, -2)
-        val coordenadasFinales=coordsFinales(pasos)
-        println("Coordenadas finales: (${coordenadasFinales.first}, ${coordenadasFinales.second})")
-    }
-    private fun coordsFinales(pasos: IntArray): Pair<Int, Int>{
-        val direcciones= arrayOf(Pair(0, 1), Pair(-1, 0), Pair(0, -1), Pair(1, 0))
-        var direccionActual= 0
-        var x= 0
-        var y= 0
-        pasos.forEach { paso ->
-            val direccion = direcciones[direccionActual]
-            val movimiento = paso * if (paso >= 0) 1 else -1
-            x += direccion.first * movimiento
-            y += direccion.second * movimiento
-            direccionActual = (direccionActual + 1) % 4
-        }
-        return Pair(x, y)
-    }
-}
-
-/*
         enableEdgeToEdge()
         setContent {
-            WhereIsDaRobotTheme {
+            MyApplicationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "Android",
@@ -63,9 +41,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    WhereIsDaRobotTheme {
+    MyApplicationTheme {
         Greeting("Android")
     }
 }
-
-*/
