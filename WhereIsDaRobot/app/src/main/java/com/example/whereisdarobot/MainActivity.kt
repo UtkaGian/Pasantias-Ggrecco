@@ -1,6 +1,8 @@
 package com.example.whereisdarobot
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -17,9 +19,13 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val pasos= intArrayOf(10, 5, -2)
-        val coordenadasFinales=coordsFinales(pasos)
-        println("Coordenadas finales: (${coordenadasFinales.first}, ${coordenadasFinales.second})")
+        val btnHiii= findViewById<Button>(R.id.btnHiii)
+        btnHiii.setOnClickListener {
+            Log.i("Juancarlo", "Boton pulsado")
+        }
+        //val pasos= intArrayOf(10, 5, -2)
+        //val coordenadasFinales=coordsFinales(pasos)
+        //println("Coordenadas finales: (${coordenadasFinales.first}, ${coordenadasFinales.second})")
     }
     private fun coordsFinales(pasos: IntArray): Pair<Int, Int>{
         val direcciones= arrayOf(Pair(0, 1), Pair(-1, 0), Pair(0, -1), Pair(1, 0))

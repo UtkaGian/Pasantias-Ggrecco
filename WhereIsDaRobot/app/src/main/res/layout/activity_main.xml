@@ -6,6 +6,15 @@
     tools:context=".MainActivity"
     >
 
-    <include layout="@layout/textlayout" />
+
+    <Button
+        android:id="@+id/btnHiii"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:text="Hiiiii"
+        tools:ignore="HardcodedText"
+        />
 
 </FrameLayout>
