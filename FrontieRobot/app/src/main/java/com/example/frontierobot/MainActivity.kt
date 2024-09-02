@@ -1,6 +1,8 @@
 package com.example.frontierobot
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -12,12 +14,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.frontierobot.ui.theme.FrontieRobotTheme
+import com.example.frontierobot.ui.theme.MovingRobot
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_init)
-        
+        val btnStart= findViewById<Button>(R.id.PressStartbtn)
+        btnStart.setOnClickListener {
+            val intent= Intent(this, MovingRobot::class.java)
+            startActivity(intent)
+        }
     }
 }
 
