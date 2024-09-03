@@ -33,7 +33,7 @@ class MovingRobot : AppCompatActivity() {
         val params= Ordis.layoutParams as RelativeLayout.LayoutParams
         btnContinue.setOnClickListener{
             val (x, y)= coords[index]
-            if(index<=coords.size){
+            if(index<coords.size){
                 if (x != null) {
                     params.leftMargin= x*10
                 }
