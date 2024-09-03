@@ -21,15 +21,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_init)
         val btnStart= findViewById<Button>(R.id.PressStartbtn)
-        val coordx1= 46
-        val coordy= 700
         btnStart.setOnClickListener {
             val intent= Intent(this, MovingRobot::class.java)
-            intent.putExtra("CoordX",coordx1 )
-            intent.putExtra("CoordY", coordy)
             startActivity(intent)
         }
     }
+
 }
 
 

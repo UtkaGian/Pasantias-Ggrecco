@@ -17,5 +17,17 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="13dp"
         tools:layout_editor_absoluteY="162dp" />
+    <Button
+        android:id="@+id/Next"
+        android:layout_marginTop="600dp"
+        android:layout_marginStart="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textSize="60sp"
+        android:background="#026867"
+        tools:ignore="HardcodedText,SpUsage">
+
+    </Button>
 
 </RelativeLayout>
