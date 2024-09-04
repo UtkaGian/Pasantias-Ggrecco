@@ -5,6 +5,31 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.theme.Reward">
+    tools:context=".ui.theme.Reward"
+    android:background="@color/black">
+    <TextView
+        android:id="@+id/Object"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:text="PROVISORIO"
+        android:textSize="25dp"
+        tools:ignore="HardcodedText,SpUsage">
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Object"
+        android:textColor="@color/white"
+        android:text="PROVISORIO"
+        android:textSize="25dp"
+        tools:ignore="HardcodedText,SpUsage">
+
+    </TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

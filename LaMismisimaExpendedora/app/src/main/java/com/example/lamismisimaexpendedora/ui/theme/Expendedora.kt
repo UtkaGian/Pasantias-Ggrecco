@@ -51,6 +51,8 @@ class Expendedora : AppCompatActivity() {
         val code=input.text.toString()
         btnSelect.setOnClickListener{
             val intent2= Intent(this, Reward::class.java)
+            intent2.putExtra("Code", code)
+            intent2.putExtra("Cash", Plata)
             startActivity(intent2)
         }
 
