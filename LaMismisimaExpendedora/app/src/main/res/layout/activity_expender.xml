@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.theme.Expendedora"
+    android:background="#246B78"
+    android:paddingBottom="25dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Input"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="15dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coca-cola: AA ---------> $335ARS"
+                android:textSize="18dp"
+                tools:ignore="HardcodedText,SpUsage"
+                android:textColor="#DAB047">
+
+            </TextView>
+            <TextView
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    Sprite:    AB ---------> $315ARS"
+                android:textSize="18dp"
+                tools:ignore="HardcodedText,SpUsage"
+                android:textColor="#DAB047">
+
+            </TextView>
+            <TextView
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    Fanta:    BA ---------> $350ARS"
+                android:textSize="18dp"
+                tools:ignore="HardcodedText,SpUsage"
+                android:textColor="#DAB047">
+
+            </TextView>
+            <TextView
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    Agua:     AB ---------> $250ARS"
+                android:textSize="18dp"
+                tools:ignore="HardcodedText,SpUsage"
+                android:textColor="#DAB047">
+
+            </TextView>
+            <TextView
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   Baggio:    BB ---------> $275ARS"
+                android:textSize="18dp"
+                tools:ignore="HardcodedText,SpUsage"
+                android:textColor="#DAB047">
+
+            </TextView>
+            <TextView
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   Speed:     AC ---------> $350ARS"
+                android:textSize="18dp"
+                tools:ignore="HardcodedText,SpUsage"
+                android:textColor="#DAB047">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/Input"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Send"
+        android:text="    Inster code"
+        android:background="@color/black"
+        android:textSize="25dp"
+        android:textColor="#DBA047"
+        tools:ignore="HardcodedText,SpUsage">
+
+    </androidx.appcompat.widget.AppCompatEditText>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="390dp">
+        <Button
+            android:id="@+id/Sendbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:textSize="25dp"
+            android:background="#AEAFAF"
+            tools:ignore="HardcodedText,SpUsage">
+
+        </Button>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Cent50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/Cent25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/black"
+        app:cardCornerRadius="5dp">
+        <Button
+            android:id="@+id/Cent50btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25 Centavos"
+            android:background="#AFB0B0"
+            android:padding="15dp"
+            tools:ignore="HardcodedText">
+
+        </Button>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Cent25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/Cent50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="5dp">
+        <Button
+            android:id="@+id/Cent25btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50 Centavos"
+            android:padding="15dp"
+            android:background="#B0B1B1"
+            tools:ignore="HardcodedText">
+
+        </Button>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Cent10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/Cent5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/Cent50"
+        android:layout_marginBottom="15dp"
+        android:background="@color/black"
+        app:cardCornerRadius="5dp">
+        <Button
+            android:id="@+id/Cent10btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 Centavos"
+            android:background="#AFB0B0"
+            android:padding="15dp"
+            tools:ignore="HardcodedText">
+
+        </Button>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Cent5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/Cent10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/Cent25"
+        android:layout_marginBottom="15dp"
+        app:cardCornerRadius="5dp">
+        <Button
+            android:id="@+id/Cent5btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 5 Centavos "
+            android:padding="15dp"
+            android:background="#B0B1B1"
+            tools:ignore="HardcodedText">
+
+        </Button>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

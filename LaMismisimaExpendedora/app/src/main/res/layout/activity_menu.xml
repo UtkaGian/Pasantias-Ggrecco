@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDE671"
+    android:paddingTop="450dp">
+    <Button
+        android:id="@+id/Startbtn"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:text="Comenzar"
+        android:textSize="50dp"
+        android:background="#FADA3C"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        tools:ignore="HardcodedText,SpUsage">
+
+    </Button>
+
+
+</LinearLayout>
