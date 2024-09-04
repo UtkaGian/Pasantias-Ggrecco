@@ -10,8 +10,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LaMismisimaExpendedora"
+        android:theme="@style/Theme.AppCompat"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.theme.Reward"
+            android:exported="false" />
         <activity
             android:name=".ui.theme.Expendedora"
             android:exported="false" />
@@ -19,7 +22,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.LaMismisimaExpendedora">
+            android:theme="@style/Theme.AppCompat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
