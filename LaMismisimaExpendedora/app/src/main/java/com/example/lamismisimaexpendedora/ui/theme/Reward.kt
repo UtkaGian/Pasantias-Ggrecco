@@ -1,6 +1,8 @@
 package com.example.lamismisimaexpendedora.ui.theme
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +16,7 @@ class Reward : AppCompatActivity() {
     private lateinit var Object:TextView
     private lateinit var Cash:TextView
     private lateinit var Code:String
+    private lateinit var RESTART:Button
     private var Money:Int=0
     private var Retorno:Int=0
 
@@ -25,10 +28,15 @@ class Reward : AppCompatActivity() {
         Code= intent.extras?.getString("Code").toString()
         Money= intent.extras?.getInt("Cash")!!
         printer()
+        val intent3= Intent(this, Expendedora::class.java)
+        RESTART.setOnClickListener{
+            startActivity(intent3)
+        }
     }
     private fun initTexts(){
         Object=findViewById<TextView>(R.id.Object)
         Cash=findViewById<TextView>(R.id.Cash)
+        RESTART=findViewById<Button>(R.id.RESTARTbtn)
     }
     private fun printer(){
         Code.toUpperCase()

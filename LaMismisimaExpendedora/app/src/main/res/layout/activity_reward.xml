@@ -36,4 +36,21 @@
 
     </TextView>
 
+    <Button
+        android:id="@+id/RESTARTbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cash"
+        android:layout_marginTop="80dp"
+        android:background="@color/white"
+        android:text="RESTART"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:padding="10dp"
+        tools:ignore="HardcodedText,SpUsage">
+
+    </Button>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
