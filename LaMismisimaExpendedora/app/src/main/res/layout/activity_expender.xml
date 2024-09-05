@@ -56,7 +56,7 @@
                 android:layout_margin="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="    Agua:     AB ---------> $250ARS"
+                android:text="    Agua:     BB ---------> $250ARS"
                 android:textSize="18dp"
                 tools:ignore="HardcodedText,SpUsage"
                 android:textColor="#DAB047">
@@ -66,7 +66,7 @@
                 android:layout_margin="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="   Baggio:    BB ---------> $275ARS"
+                android:text="   Baggio:    AC ---------> $275ARS"
                 android:textSize="18dp"
                 tools:ignore="HardcodedText,SpUsage"
                 android:textColor="#DAB047">
@@ -76,7 +76,7 @@
                 android:layout_margin="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="   Speed:     AC ---------> $350ARS"
+                android:text="   Speed:     CA ---------> $375ARS"
                 android:textSize="18dp"
                 tools:ignore="HardcodedText,SpUsage"
                 android:textColor="#DAB047">
@@ -124,16 +124,16 @@
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-        android:id="@+id/Cent50"
+        android:id="@+id/Cent25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@+id/Cent25"
+        app:layout_constraintEnd_toStartOf="@+id/Cent50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="@color/black"
         app:cardCornerRadius="5dp">
         <Button
-            android:id="@+id/Cent50btn"
+            android:id="@+id/Cent25btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="25 Centavos"
@@ -145,15 +145,15 @@
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-        android:id="@+id/Cent25"
+        android:id="@+id/Cent50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/Cent50"
+        app:layout_constraintStart_toEndOf="@id/Cent25"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:cardCornerRadius="5dp">
         <Button
-            android:id="@+id/Cent25btn"
+            android:id="@+id/Cent50btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="50 Centavos"

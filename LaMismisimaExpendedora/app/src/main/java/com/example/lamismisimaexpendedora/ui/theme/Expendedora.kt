@@ -18,7 +18,7 @@ class Expendedora : AppCompatActivity() {
     private lateinit var btn5Cent: Button
     private lateinit var btnSelect: Button
     private lateinit var input: EditText
-    private var Plata=0
+    private var Plata: Int=0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,8 +48,8 @@ class Expendedora : AppCompatActivity() {
         btn5Cent.setOnClickListener{
             Plata+=5
         }
-        val code=input.text.toString()
         btnSelect.setOnClickListener{
+            val code= input.text.toString()
             val intent2= Intent(this, Reward::class.java)
             intent2.putExtra("Code", code)
             intent2.putExtra("Cash", Plata)
