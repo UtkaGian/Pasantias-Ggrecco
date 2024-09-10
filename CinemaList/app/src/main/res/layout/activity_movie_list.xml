@@ -42,7 +42,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:text="HOLA"
+        tools:text="HOLA"
         android:textSize="40dp"
         tools:ignore="HardcodedText,SpUsage">
 
