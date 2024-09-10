@@ -6,16 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="CinemaList.MovieListActivity"
-    android:paddingTop="150dp"
-    android:background="#13363E">
+    android:background="#1F6A68">
+    <View
+        android:id="@+id/topBarCover"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#540A1E23">
+
+    </View>
     <androidx.appcompat.widget.SearchView
         android:id="@+id/svCinema"
         android:layout_width="0dp"
         android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/topBarCover"
+        android:background="#540A1E23"
         android:iconifiedByDefault="false">
 
     </androidx.appcompat.widget.SearchView>
@@ -37,8 +43,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="HOLA"
-        android:textSize="40dp">
+        android:textSize="40dp"
+        tools:ignore="HardcodedText,SpUsage">
 
     </TextView>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </ProgressBar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
