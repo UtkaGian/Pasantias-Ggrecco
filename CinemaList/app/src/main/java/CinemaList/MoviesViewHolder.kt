@@ -13,10 +13,11 @@ class MoviesViewHolder(view:View): RecyclerView.ViewHolder(view){
 
     private val binding= ItemMovieBinding.bind(view)
 
-    fun bind(movieItemResponse: movieItemResponse){
+    fun bind(movieItemResponse: movieItemResponse, onItemSelected:(Int)->Unit){
         binding.movieOgTitle.text= movieItemResponse.ogTitle
         val url="https://image.tmdb.org/t/p/w500"+movieItemResponse.poster
         Log.i("gg", "$url")
         Picasso.get().load(url).into(binding.ivPoster)
+        binding.root.setOnClickListener { onItemSelected(movieItemResponse.mId) }
     }
 }

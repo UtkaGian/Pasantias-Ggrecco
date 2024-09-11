@@ -1,5 +1,7 @@
 package CinemaList
 
+
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
@@ -47,7 +49,7 @@ class MovieListActivity : AppCompatActivity() {
             }
 
         })
-        adapter= MovieListAdapter()
+        adapter= MovieListAdapter{navigateToDetail(it)}
         binding.rvCinema.setHasFixedSize(true)
         binding.rvCinema.layoutManager= LinearLayoutManager(this)
         binding.rvCinema.adapter= adapter
@@ -80,5 +82,10 @@ class MovieListActivity : AppCompatActivity() {
             .baseUrl("https://api.themoviedb.org/3/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+    }
+    private fun navigateToDetail(id:Int){
+        val intent= Intent(this, DetailMovieActivity::class.java)
+        intent.putExtra("id", id)
+        startActivity(intent)
     }
 }

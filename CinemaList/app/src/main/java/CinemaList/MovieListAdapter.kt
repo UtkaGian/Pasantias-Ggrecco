@@ -5,7 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cinemalist.R
 
-class MovieListAdapter(var movies:List<movieItemResponse> = emptyList()) : RecyclerView.Adapter<MoviesViewHolder>() {
+class MovieListAdapter(
+    var movies:List<movieItemResponse> = emptyList(),
+    private val onItemSelected:(Int) -> Unit) :
+    RecyclerView.Adapter<MoviesViewHolder>() {
 
     fun updateList(movies:List<movieItemResponse>){
         this.movies=movies
@@ -19,7 +22,7 @@ class MovieListAdapter(var movies:List<movieItemResponse> = emptyList()) : Recyc
 
     override fun onBindViewHolder(viewholder: MoviesViewHolder, position: Int) {
         val item= movies[position]
-        viewholder.bind(item)
+        viewholder.bind(item, onItemSelected)
     }
 
     override fun getItemCount() = movies.size
