@@ -47,8 +47,17 @@ class DetailMovieActivity : AppCompatActivity() {
             .build()
     }
     private fun createUi(movie: MovieDetailResponse){
-        Log.i("gg", movie.toString())
+        val run= movie.genres.toList()
+        Log.i("gg", run.toString())
         val url="https://image.tmdb.org/t/p/w500"+movie.posterPath
         Picasso.get().load(url).into(binding.ivPoster)
+        binding.Title.text= movie.title
+        binding.Tagline.text= movie.tagline
+        binding.Release.text= "Release: " + movie.releaseDate
+        binding.Runtime.text= "Duration: " + movie.runtime.toString()
+        binding.Score.text= "Score: " + movie.voteAverage.toString()
+        binding.Genres.text= "Genres: " + movie.genres
+        binding.Language.text= "Language: " + movie.originalLanguage
+        binding.Overview.text= movie.overview
     }
 }

@@ -17,8 +17,6 @@ data class MovieDetailResponse(
 
 
 data class Genres (
-
-    @SerializedName("id"   ) var id   : Int?    = null,
     @SerializedName("name" ) var name : String? = null
 
 )

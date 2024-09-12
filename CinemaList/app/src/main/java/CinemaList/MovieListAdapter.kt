@@ -1,17 +1,21 @@
 package CinemaList
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cinemalist.R
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class MovieListAdapter(
     var movies:List<movieItemResponse> = emptyList(),
     private val onItemSelected:(Int) -> Unit) :
     RecyclerView.Adapter<MoviesViewHolder>() {
 
+    @SuppressLint("NewApi")
     fun updateList(movies:List<movieItemResponse>){
-        this.movies=movies
+        this.movies = movies.sortedBy{it.rDate}
         notifyDataSetChanged()
     }
 
