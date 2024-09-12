@@ -16,9 +16,8 @@ interface ApiService {
         @Query("api_key") apiKey: String= "9b065c50c7dbe055f95d9b08d33558ad"
     ): Response<movieDataResponse>
 
-    @GET("movie/")
+    @GET("movie/{id}?&api_key=9b065c50c7dbe055f95d9b08d33558ad")
     suspend fun getMovieData(
-        @Query("query") movieId: Int,
-        @Query("api_key") apiKey: String= "9b065c50c7dbe055f95d9b08d33558ad"
-    ):Response<>
+        @Path("id") movieId:Int
+    ):Response<MovieDetailResponse>
 }

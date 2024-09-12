@@ -49,7 +49,7 @@ class MovieListActivity : AppCompatActivity() {
             }
 
         })
-        adapter= MovieListAdapter{navigateToDetail(it)}
+        adapter= MovieListAdapter{ navigateToDetail(it) }
         binding.rvCinema.setHasFixedSize(true)
         binding.rvCinema.layoutManager= LinearLayoutManager(this)
         binding.rvCinema.adapter= adapter
