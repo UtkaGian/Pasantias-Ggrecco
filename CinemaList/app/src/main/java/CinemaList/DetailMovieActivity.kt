@@ -47,8 +47,9 @@ class DetailMovieActivity : AppCompatActivity() {
             .build()
     }
     private fun createUi(movie: MovieDetailResponse){
-        val run= movie.genres.toList()
-        Log.i("gg", run.toString())
+        val siz= movie.genres.map { it.name }
+        val allGenres= siz.joinToString(", ")
+        Log.i("gg", allGenres)
         val url="https://image.tmdb.org/t/p/w500"+movie.posterPath
         Picasso.get().load(url).into(binding.ivPoster)
         binding.Title.text= movie.title
@@ -56,7 +57,7 @@ class DetailMovieActivity : AppCompatActivity() {
         binding.Release.text= "Release: " + movie.releaseDate
         binding.Runtime.text= "Duration: " + movie.runtime.toString()
         binding.Score.text= "Score: " + movie.voteAverage.toString()
-        binding.Genres.text= "Genres: " + movie.genres
+        binding.Genres.text= "Genres: " + allGenres
         binding.Language.text= "Language: " + movie.originalLanguage
         binding.Overview.text= movie.overview
     }
