@@ -7,15 +7,95 @@
     android:layout_height="match_parent"
     tools:context=".DigitalGate.DigimonFightActivity"
     android:background="#0635C5">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cvA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRes"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvRSTBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cvA"
+            app:layout_constraintBottom_toTopOf="@id/cvD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardBackgroundColor="#F25500"
+            app:cardCornerRadius="100dp">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_attack">
+
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cvA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRes"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSTBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cvA"
+            app:layout_constraintBottom_toTopOf="@id/cvD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardBackgroundColor="#F25500"
+            app:cardCornerRadius="100dp">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_attack">
+
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+        </TextView>
+
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/tvResDP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cvA"
+        app:layout_constraintTop_toBottomOf="@id/cvD"
         app:layout_constraintBottom_toTopOf="@id/tvResDP"
-        android:text="10000DP"
         android:textSize="60sp"
         android:textColor="@color/white">
 
@@ -27,13 +107,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvResDP"
-        android:text="El atacante murió"
         android:textSize="20sp">
 
     </TextView>
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvA"
-        android:layout_width="180dp"
+        android:id="@+id/cvD"
+        android:layout_width="210dp"
         android:layout_height="290dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -48,8 +127,8 @@
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvD"
-        android:layout_width="180dp"
+        android:id="@+id/cvA"
+        android:layout_width="210dp"
         android:layout_height="290dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"

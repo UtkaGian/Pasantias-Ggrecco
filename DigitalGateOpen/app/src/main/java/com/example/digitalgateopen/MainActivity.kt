@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
         ids= mutableListOf()
         finalIds= mutableListOf()
         binding.tvSign.setOnClickListener {
-            //showPopUp()
+            showPopUp()
         }
         initUI()
 

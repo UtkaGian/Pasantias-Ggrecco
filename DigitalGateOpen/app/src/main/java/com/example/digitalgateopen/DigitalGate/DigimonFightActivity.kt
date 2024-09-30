@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.example.digitalgateopen.databinding.ActivityDigimonFightBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import com.squareup.picasso.Picasso
 
 class DigimonFightActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDigimonFightBinding
@@ -26,7 +28,10 @@ class DigimonFightActivity : AppCompatActivity() {
         DigimonA= intent.getStringExtra("idA")!!
         DigimonD= intent.getStringExtra("idD")!!
         ListID= listOf(DigimonA, DigimonD).toMutableList()
-        initFight()
+        Picasso.get().load("https://images.digimoncard.io/images/cards/"+DigimonA+".jpg").into(binding.ivA)
+        Picasso.get().load("https://images.digimoncard.io/images/cards/"+DigimonD+".jpg").into(binding.ivD)
+        binding.cvSTBTN.setOnClickListener { initFight() }
+
     }
     private fun initFight(){
         Log.i("gg", ListID.toString())
@@ -74,13 +79,18 @@ class DigimonFightActivity : AppCompatActivity() {
         Log.i("gg", DColors.toString())
         val remainingDP = calculateRemainingDP(AColors, DColors, dpA, dpD)
         Log.i("gg", remainingDP.toString())
+        runOnUiThread{
+            binding.tvResDP.text= remainingDP.toString()
+        }
         evaluateBattleOutcome(remainingDP)
     }
     fun evaluateBattleOutcome(remainingDP: Int) {
-        when {
-            remainingDP > 0 -> Log.i("gg","El Digimon defensor ha sobrevivido y el atacante ha muerto.")
-            remainingDP < 0 -> Log.i("gg", "El Digimon defensor ha muerto.")
-            else -> Log.i("gg", "Ambos Digimons han muerto.")
+        runOnUiThread {
+            when {
+                remainingDP > 0 -> binding.tvRes.text= "El Digimon defensor ha sobrevivido y el atacante ha muerto."
+                remainingDP < 0 -> binding.tvRes.text= "Digimon defensor ha muerto."
+                else -> binding.tvRes.text= "Digimons han muerto."
+            }
         }
     }
     private fun calculateRemainingDP(AColors: List<String>, DColors: List<String>, dpA: Int?, dpD: Int?): Int {
