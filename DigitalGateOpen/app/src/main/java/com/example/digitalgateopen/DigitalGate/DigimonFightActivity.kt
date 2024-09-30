@@ -1,10 +1,12 @@
 package com.example.digitalgateopen.DigitalGate
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import com.example.digitalgateopen.MainActivity
 import com.example.digitalgateopen.databinding.ActivityDigimonFightBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -83,6 +85,16 @@ class DigimonFightActivity : AppCompatActivity() {
             binding.tvResDP.text= remainingDP.toString()
         }
         evaluateBattleOutcome(remainingDP)
+        /*
+        binding.cvRSTBTN.setOnClickListener {
+            runOnUiThread{
+                val intent= Intent(this, MainActivity::class.java)
+                intent.putExtra("axis", 0)
+                startActivity(intent)
+            }
+        }
+
+         */
     }
     fun evaluateBattleOutcome(remainingDP: Int) {
         runOnUiThread {
