@@ -93,7 +93,8 @@
         app:layout_constraintTop_toBottomOf="@id/cvD"
         app:layout_constraintBottom_toTopOf="@id/tvResDP"
         android:textSize="60sp"
-        android:textColor="@color/white">
+        android:textColor="@color/white"
+        android:textAlignment="center">
 
     </TextView>
     <TextView
@@ -103,7 +104,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvResDP"
-        android:textSize="20sp">
+        android:textSize="20sp"
+        android:textAlignment="center">
 
     </TextView>
     <androidx.cardview.widget.CardView

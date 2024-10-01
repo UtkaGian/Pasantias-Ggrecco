@@ -85,16 +85,14 @@ class DigimonFightActivity : AppCompatActivity() {
             binding.tvResDP.text= remainingDP.toString()
         }
         evaluateBattleOutcome(remainingDP)
-        /*
-        binding.cvRSTBTN.setOnClickListener {
-            runOnUiThread{
+        runOnUiThread{
+            binding.cvRSTBTN.setOnClickListener {
                 val intent= Intent(this, MainActivity::class.java)
                 intent.putExtra("axis", 0)
                 startActivity(intent)
             }
         }
 
-         */
     }
     fun evaluateBattleOutcome(remainingDP: Int) {
         runOnUiThread {
